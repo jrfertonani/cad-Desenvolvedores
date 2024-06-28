@@ -1,14 +1,7 @@
-.card {
-  font-size: 3rem;
-  font-weight: 300;
-  line-height: 1.2;
+.card{
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-.card-body{
-  font-size: 1.1rem;
-}
-
-.home{
-  padding: 16px;
-  background-color: #fff;
-}
