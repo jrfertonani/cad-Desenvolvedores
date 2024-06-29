@@ -1,6 +1,9 @@
 import { Component, Input, OnInit, input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
+import { PessoasService } from '../../../services/pessoas.service';
+import { Pessoa } from '../../../services/pessoas.model';
+
 
 @Component({
   selector: 'app-pessoa-update',
@@ -10,30 +13,35 @@ import { Router } from '@angular/router';
   styleUrl: './pessoa-update.component.css'
 })
 export class PessoaUpdateComponent implements OnInit {
-  constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  pessoa!:Pessoa;
+
+  constructor(
+    private Service: PessoasService,
+    private router: Router,
+    private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      const id = params.get('id');
+       if (id) {
+        this.Service.findById(id).subscribe(pessoa => {
+        this.pessoa = pessoa;
+        });
+      }
+    });
+  }
 
 
+  updatePessoa(): void {
+    this.Service.update(this.pessoa).subscribe(() => {
+      this.Service.showMessage("Ok!");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  updatePessoa() {
-    throw new Error('Method not implemented.');
+      this.router.navigate(['/pessoas'])
+    })
   }
 
   cancel() {
-    throw new Error('Method not implemented.');
+    this.router.navigate(['/pessoas'])
   }
 }

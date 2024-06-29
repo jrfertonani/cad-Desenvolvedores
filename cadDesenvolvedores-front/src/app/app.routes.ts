@@ -8,8 +8,8 @@ import { PessoaDeleteComponent } from './components/pessoa/pessoa-delete/pessoa-
 
 export const routes: Routes = [
   {path:"", component: HomeComponent},
-  {path:"pessoa", component: PessoaComponent},
-  {path:"pessoa/create", component: PessoaCreateComponent},
-  {path:"pessoa/update/:id", component: PessoaUpdateComponent},
-  {path:"pessoa/delete/:id", component: PessoaDeleteComponent}
+  {path:"pessoas", component: PessoaComponent},
+  {path:"pessoas/create", component: PessoaCreateComponent},
+  {path:"pessoas/update/:id", component: PessoaUpdateComponent},
+  {path:"pessoas/delete/:id", component: PessoaDeleteComponent}
 ];

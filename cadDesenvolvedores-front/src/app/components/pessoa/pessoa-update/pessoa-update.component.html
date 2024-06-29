@@ -4,20 +4,12 @@
     <input
       class="form-control"
       placeholder="Nome"
-
+      [(ngModel)]="pessoa.nome"
       name="Nome"
     />
 
-    <input
-      class="form-control"
-      placeholder="teste"
-
-      name="Price"
-    />
   </form>
 </div>
-<button type="button" class="btn btn-outline-secondary" (click)="updatePessoa()">
-  Salvar
-</button>
+<button type="button" class="btn btn-outline-secondary" (click)="updatePessoa()">Salvar</button>
 
 <button type="button" class="btn btn-outline-secondary" (click)="cancel()">Cancelar</button>
