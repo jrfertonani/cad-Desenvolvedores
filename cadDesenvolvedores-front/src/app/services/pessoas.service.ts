@@ -2,15 +2,11 @@ import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Pessoa } from './pessoas.model';
-import id from '@angular/common/locales/id';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PessoasService {
-  showMessage(arg0: string) {
-    throw new Error('Method not implemented.');
-  }
 
   http = inject(HttpClient);
 
@@ -19,7 +15,13 @@ export class PessoasService {
   constructor() { }
 
 
+  showMessage(arg0: string) {
+    throw new Error('Method not implemented.');
+  }
 
+  create(pessoa: Pessoa): Observable<Pessoa>{
+    return this.http.post<Pessoa>(this.URL, pessoa);
+  }
 
   finsAll(): Observable<Pessoa[]>{
     return this.http.get<Pessoa[]>(this.URL);
@@ -39,5 +41,7 @@ export class PessoasService {
     const url = `${this.URL}/${id}`
     return this.http.delete<Pessoa>(url);
   }
+
+
 
 }

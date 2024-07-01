@@ -16,6 +16,8 @@ export class PessoaUpdateComponent implements OnInit {
 
   pessoa!:Pessoa;
 
+  pessoas:Pessoa[] = [];
+
   constructor(
     private Service: PessoasService,
     private router: Router,
@@ -33,12 +35,14 @@ export class PessoaUpdateComponent implements OnInit {
   }
 
 
+
+
   updatePessoa(): void {
     this.Service.update(this.pessoa).subscribe(() => {
       this.Service.showMessage("Ok!");
+    });
 
-      this.router.navigate(['/pessoas'])
-    })
+    this.router.navigate(['/pessoas']);
   }
 
   cancel() {

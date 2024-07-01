@@ -1,4 +1,4 @@
 export interface Pessoa {
-  id?:number
+  id?: number
   nome: string
 }

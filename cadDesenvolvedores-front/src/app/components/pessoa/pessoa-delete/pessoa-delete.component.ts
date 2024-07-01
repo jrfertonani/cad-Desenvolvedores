@@ -13,6 +13,7 @@ import { PessoasService } from '../../../services/pessoas.service';
   styleUrl: './pessoa-delete.component.css'
 })
 export class PessoaDeleteComponent implements OnInit {
+
   constructor(private router: Router, private route: ActivatedRoute, private Service: PessoasService) {}
 
   pessoa!: Pessoa;
@@ -35,8 +36,8 @@ export class PessoaDeleteComponent implements OnInit {
     if (this.pessoa && this.pessoa.id) { // Check if product and id exist
       this.Service.delete(this.pessoa.id).subscribe(() => {
         this.Service.showMessage("Produto excluido com sucesso!");
-        this.router.navigate(['/']);
-      });
+             });
+             this.router.navigate(['/pessoas']);
     } else {
       console.error("Product data or ID is missing."); // Handle missing data
     }

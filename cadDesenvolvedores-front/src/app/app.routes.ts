@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { NavBarComponent } from './components/views/nav-bar/nav-bar.component';
 import { HomeComponent } from './components/views/home/home.component';
 import { PessoaComponent } from './components/pessoa/pessoa.component';
 import { PessoaCreateComponent } from './components/pessoa/pessoa-create/pessoa-create.component';
