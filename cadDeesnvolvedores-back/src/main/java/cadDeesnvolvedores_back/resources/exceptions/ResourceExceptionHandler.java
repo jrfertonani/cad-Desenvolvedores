@@ -1,7 +1,6 @@
 package cadDeesnvolvedores_back.resources.exceptions;
 
-//import chamados.services.exceptions.DataIntegrityViolationException;
-//import chamados.services.exceptions.ObjectNotFoundException;
+
 import cadDeesnvolvedores_back.services.exceptions.DataIntegrityViolationException;
 import cadDeesnvolvedores_back.services.exceptions.ObjectNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;

@@ -15,7 +15,7 @@ import java.io.Serializable;
 @Setter
 @EqualsAndHashCode(of = "id")
 @Entity
-public abstract class Pessoa implements Serializable {
+public abstract class Pessoas implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
