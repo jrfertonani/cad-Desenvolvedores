@@ -16,8 +16,6 @@ public class DesenvolvedorServiceImpl implements DesenvolvedoreService{
 
     @Autowired
     private DesenvolvedorRepository repository;
-    @Autowired
-    private ObjectMapper jacksonObjectMapper;
 
 
     @Override

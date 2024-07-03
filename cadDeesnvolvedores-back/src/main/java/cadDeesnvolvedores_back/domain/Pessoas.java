@@ -1,9 +1,7 @@
 package cadDeesnvolvedores_back.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import cadDeesnvolvedores_back.domain.enums.EnumStatus;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
@@ -22,6 +20,8 @@ public abstract class Pessoas implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Integer id;
     protected String nome;
+
+
 
 
 

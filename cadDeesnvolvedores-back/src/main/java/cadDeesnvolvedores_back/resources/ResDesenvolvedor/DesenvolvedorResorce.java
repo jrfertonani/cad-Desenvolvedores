@@ -12,7 +12,6 @@ public interface DesenvolvedorResorce {
     @PostMapping
     ResponseEntity<DesenvolvedoresDTO> create(@RequestBody DesenvolvedoresDTO objDTO);
 
-
     @GetMapping
     ResponseEntity<List<DesenvolvedoresDTO>> findAll();
 

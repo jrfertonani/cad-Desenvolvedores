@@ -11,7 +11,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
@@ -44,8 +43,8 @@ public class DesenvolvedorResouceimpl implements DesenvolvedorResorce{
 
     @Override
     public ResponseEntity<DesenvolvedoresDTO> findById(Integer id) {
-        Desenvolvedores list = service.findById(id);
-        return ResponseEntity.ok().body(new DesenvolvedoresDTO(list));
+        Desenvolvedores obj = service.findById(id);
+        return ResponseEntity.ok().body(new DesenvolvedoresDTO(obj));
     }
 
     @Override
