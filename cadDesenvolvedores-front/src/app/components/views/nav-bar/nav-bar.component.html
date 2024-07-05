@@ -2,21 +2,41 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="/">Navbar</a>
 
-    <ul class="nav">
+    <div class="drop">
+    <div class="dropdown ">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+        Editar
+      </button>
+      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+        <li><a class="dropdown-item active" href="/pessoas">Pessoas</a></li>
+        <li><a class="dropdown-item" href="/desenvolvedores">Desenvolvedores</a></li>
+        <li><a class="dropdown-item" href="#">........</a></li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="/pessoas">Editar</a>
-      </li>
+      </ul>
+    </div>
 
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="pessoas/create">Cadastro</a>
-      </li>
-    </ul>
+
+    <div class="dropdown ">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+        Cadastrar
+      </button>
+      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+        <li><a class="dropdown-item active" href="/pessoas/create">Pessoas</a></li>
+        <li><a class="dropdown-item" href="/desenvolvedores/create">Desenvolvedores</a></li>
+        <li><a class="dropdown-item" href="#">........</a></li>
+
+      </ul>
+    </div>
+  </div>
+
   </div>
 </nav>
 
 
+
+
 <router-outlet>
+
 
 </router-outlet>
 
