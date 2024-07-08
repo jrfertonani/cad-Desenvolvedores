@@ -5,6 +5,7 @@ import cadDeesnvolvedores_back.domain.dtos.DesenvolvedoresDTO;
 import cadDeesnvolvedores_back.services.SerDesenvolvedor.DesenvolvedoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -15,7 +16,8 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/desenvolvedores")
-public class DesenvolvedorResouceimpl implements DesenvolvedorResorce{
+@CrossOrigin("*")
+public final class DesenvolvedorResouceimpl implements DesenvolvedorResorce{
 
     @Autowired
     public DesenvolvedoreService service;
