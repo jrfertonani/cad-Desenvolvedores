@@ -8,29 +8,31 @@
 </div>
 
 <div class="conteiner">
-  <table class="table table-hover">
+  <table class="table table-hover " >
     <thead>
       <tr>
         <th>ID</th>
         <th>Nome</th>
+        <th>Niveis</th>
         <th>Ações</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let pessoa of sliceProducts(currentPage, itemsPerPage)">
-        <td>{{ pessoa.id }}</td>
-        <td>{{ pessoa.nome }}</td>
+      <tr *ngFor="let desenvolvedor of sliceProducts(currentPage, itemsPerPage)">
+        <td>{{ desenvolvedor.id }} </td>
+        <td>{{ desenvolvedor.nome }}</td>
+        <td>{{ desenvolvedor.niveis }}</td>
         <td>
-          <a  href="pessoas/update/{{pessoa.id}}" class="btn btn-outline-secondary"  >Edit</a>
-          <a  href="pessoas/delete/{{pessoa.id}}" class="btn btn-outline-secondary"  >Excluir</a>
+          <a  href="pessoas/update/{{desenvolvedor.id}}" class="btn btn-outline-secondary"  >Edit</a>
+          <a  href="pessoas/delete/{{desenvolvedor.id}}" class="btn btn-outline-secondary"  >Excluir</a>
         </td>
       </tr>
     </tbody>
   </table>
 </div>
 
-<!--
+
 <button class="btn btn-outline-secondary" (click)="currentPage = currentPage - 1; sliceProducts(currentPage, itemsPerPage)" [disabled]="currentPage === 1">Previous</button>
 <button class="btn btn-outline-secondary" (click)="currentPage = currentPage + 1; sliceProducts(currentPage, itemsPerPage)" [disabled]="currentPage === totalPages">Next</button>
--->
+
 

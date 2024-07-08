@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { DesenvolvedoresService } from '../../../services/Desenvolvedores/desenvolvedores.service';
+import { Desenvolvedores } from "../../../services/Desenvolvedores/desenvolvedores.Model";
 
 @Component({
   selector: 'app-desenvolvedores-create',
@@ -11,10 +13,15 @@ import { Router } from '@angular/router';
 })
 export class DesenvolvedoresCreateComponent implements OnInit{
 
-
+  desenvolvedor: Desenvolvedores = {
+    nome: '',
+    niveis: ''
+  }
 
   constructor(
-        private router: Router
+        private router: Router,
+        private Service: DesenvolvedoresService,
+
   ){}
 
 
@@ -25,9 +32,12 @@ export class DesenvolvedoresCreateComponent implements OnInit{
 
 
 
+  createDesenvolvedores(): void {
+    this.Service.create(this.desenvolvedor).subscribe(() =>{
+      this.Service.showMessage('Salvo');
+    });
 
-  createDesenvolvedores() {
-    throw new Error('Method not implemented.');
+    this.router.navigate(['/desenvolvedores'])
   }
 
   cancel() {

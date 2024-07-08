@@ -10,7 +10,7 @@ export class PessoasService {
 
   http = inject(HttpClient);
 
-  URL = 'http://localhost:3306/pessoas';
+  URL = 'http://localhost:8080/pessoas';
 
   constructor() { }
 

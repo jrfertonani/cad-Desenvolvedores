@@ -1,8 +1,8 @@
 import { Component, Input, OnInit, input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Pessoa } from '../../../services/pessoas.model';
-import { PessoasService } from '../../../services/pessoas.service';
+import { Pessoa } from '../../../services/Pessoas/pessoas.model';
+import { PessoasService } from '../../../services/Pessoas/pessoas.service';
 
 @Component({
   selector: 'app-pessoa-create',

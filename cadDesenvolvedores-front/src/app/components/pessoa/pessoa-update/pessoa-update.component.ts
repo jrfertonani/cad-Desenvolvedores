@@ -1,8 +1,8 @@
 import { Component, Input, OnInit, input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { PessoasService } from '../../../services/pessoas.service';
-import { Pessoa } from '../../../services/pessoas.model';
+import { PessoasService } from '../../../services/Pessoas/pessoas.service';
+import { Pessoa } from '../../../services/Pessoas/pessoas.model';
 
 
 @Component({

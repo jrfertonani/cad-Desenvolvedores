@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { DesenvolvedoresService } from '../../../services/Desenvolvedores/desenvolvedores.service';
+import { Desenvolvedores } from '../../../services/Desenvolvedores/desenvolvedores.Model';
 
 @Component({
   selector: 'app-desenvolvedores-deletar',
@@ -10,12 +12,21 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class DesenvolvedoresDeletarComponent implements OnInit {
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  desenvolvedores!: Desenvolvedores;
+
+  constructor(private router: Router, private route: ActivatedRoute, private Service: DesenvolvedoresService) {}
 
 
 
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  ngOnInit(){
+    this.route.paramMap.subscribe(params => {
+      const id = params.get('id');
+      if(id){
+        this.Service.findById(id).subscribe(desenvolvedores =>{
+          this.desenvolvedores = desenvolvedores;
+        });
+      }
+    });
   }
 
 
@@ -23,10 +34,22 @@ export class DesenvolvedoresDeletarComponent implements OnInit {
 
 
 cancel() {
-throw new Error('Method not implemented.');
+  this.router.navigate(['/desenvolvedores'])
 }
-deleteDesenvolvedores() {
-throw new Error('Method not implemented.');
+
+
+deleteDesenvolvedores(): void {
+if (this.desenvolvedores && this.desenvolvedores.id){
+  this.Service.delete(this.desenvolvedores.id).subscribe(() => {
+    this.Service.showMessage("Produco excluido!");
+  });
+  this.router.navigate(['/desenvolvedores']);
+}else {
+  console.error("Produto data or ID in missing.")
 }
+}
+
+
+
 
 }

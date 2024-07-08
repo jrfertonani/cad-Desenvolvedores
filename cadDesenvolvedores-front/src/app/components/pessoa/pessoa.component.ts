@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { CurrencyPipe, NgForOf,} from '@angular/common';
-import { Pessoa } from '../../services/pessoas.model';
-import { PessoasService } from '../../services/pessoas.service';
+import { Pessoa } from '../../services/Pessoas/pessoas.model';
+import { PessoasService } from '../../services/Pessoas/pessoas.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
