@@ -33,7 +33,7 @@ export class DesenvolvedoresDeletarComponent implements OnInit {
 
 
 
-cancel() {
+cancelar() {
   this.router.navigate(['/desenvolvedores'])
 }
 

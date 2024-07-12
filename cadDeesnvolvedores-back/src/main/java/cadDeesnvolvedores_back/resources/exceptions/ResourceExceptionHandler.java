@@ -1,8 +1,9 @@
 package cadDeesnvolvedores_back.resources.exceptions;
 
 
-import cadDeesnvolvedores_back.services.exceptions.DataIntegrityViolationException;
-import cadDeesnvolvedores_back.services.exceptions.ObjectNotFoundException;
+
+import estrudos.services.exceptions.DataIntegrityViolationException;
+import estrudos.services.exceptions.ObjectNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -49,10 +49,9 @@ export class DesenvolvedoresUpdataComponent implements OnInit {
 
 
 
-  cancel() {
-    throw new Error('Method not implemented.');
+  cancelar() {
+    this.router.navigate(['/desenvolvedores'])
   }
-
 
 
 

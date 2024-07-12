@@ -33,7 +33,8 @@ public class DesenvolvedorServiceImpl implements DesenvolvedoreService{
     @Override
     public Desenvolvedores findById(Integer id) {
         Optional<Desenvolvedores> list = repository.findById(id);
-        return list.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado! ID: " +id));
+        Desenvolvedores desenvolvedores = list.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado! ID: " + id));
+        return desenvolvedores;
     }
 
     @Override
